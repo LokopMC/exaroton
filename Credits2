@@ -1,0 +1,42 @@
+# Import exaroton and set our token
+>>> from exaroton import Exaroton
+>>> exa = Exaroton(fVJctCm2BMdwCTANJF1mrzhFeyp4riLPEuUidNCO3jflabfuXiuu8KHDchOgMMmvd2AkDkBbseG3yzRtEgkF1s6kcjZ7DLiQwl37)
+
+# Get information about the authenticated account
+>>> exa.get_account()
+{
+    "_": "Account",
+    "name": "LokopMC",
+    "email": "liandlahozbrito126@gmail.com",
+    "verified": true,
+    "credits": 1500.29
+}
+
+# Get a list of our servers
+>>> exa.get_servers()
+[
+    {
+        "_": "Server",
+        "id": "7ZxuNK5RX879BFaH",  # Thanks, random.org!
+        ...
+    },
+    {
+        "_": "Server",
+        "id": "Kf48Td5iVlr8Xu24",  # Thanks, random.org!
+        ...
+    }
+]
+
+# Upload logs to https://mclo.gs
+>>> exa.upload_logs("7ZxuNK5RX879BFaH")
+{
+    "_": "Logs",
+    "id": "N5FR4K2",  # Thanks, random.org!
+    "url": "https://mclo.gs/N5FR4K2",
+    "raw": "https://api.mclo.gs/1/raw/N5FR4K2"
+}
+
+# Print logs (this'll most likely spam your output lol)
+>>> exa.get_server_logs("7ZxuNK5RX879BFaH")
+'one extremely long string with lines seperated by the newline escape character \n'
+# It'll print each line seperately when used with `print()`!
